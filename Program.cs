@@ -11,7 +11,7 @@
     Environment.Exit(-1);
     return 0;
 }
-string[] InputStringArrayConsole(int Size) 
+string[] InputStringArrayConsole(int Size) //Задание массива строк вводом его элементов из консоли
 {
     string[] array = new string[Size];
     for (int i = 0; i < Size; i++)
@@ -21,11 +21,11 @@ string[] InputStringArrayConsole(int Size)
     }
     return array;
 }
-void PrintArray(string[] array) 
+void PrintArray(string[] array) // Вывод массива в консоль
 {
     System.Console.WriteLine("["+string.Join(", ", array)+"]");
 }
-int CountElementsRequiredLength(string[] array, int StringLength)
+int CountElementsRequiredLength(string[] array, int StringLength) //Подсчет количества элементов массива пользователя, длина которых меньше либо равна заданному количеству символов
 {
     int Count =0;
     for (int i = 0; i < array.Length; i++)
@@ -34,7 +34,7 @@ int CountElementsRequiredLength(string[] array, int StringLength)
     }
     return Count;    
 }
-string[] CreateArrayStringRequiredLength(string[] array, int StringLength)
+string[] CreateArrayStringRequiredLength(string[] array, int StringLength) // создание нового массива из элементов массива пользователя, длина которых меньше либо равна заданному количеству символов
 {
     int ResultLength = CountElementsRequiredLength(array, StringLength);
     string[] result = new string[ResultLength];
