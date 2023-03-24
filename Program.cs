@@ -25,3 +25,12 @@ void PrintArray(string[] array)
 {
     System.Console.WriteLine("["+string.Join(", ", array)+"]");
 }
+int CountElementsRequiredLength(string[] array, int StringLength)
+{
+    int Count =0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= StringLength) Count++;
+    }
+    return Count;    
+}
