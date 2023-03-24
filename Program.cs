@@ -34,3 +34,19 @@ int CountElementsRequiredLength(string[] array, int StringLength)
     }
     return Count;    
 }
+string[] CreateArrayStringRequiredLength(string[] array, int StringLength)
+{
+    int ResultLength = CountElementsRequiredLength(array, StringLength);
+    string[] result = new string[ResultLength];
+    int j=0;       
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= StringLength)
+        {
+            result[j] = array[i];
+            j++;
+        }
+            
+    }
+    return result;
+}
