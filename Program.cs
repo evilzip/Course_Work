@@ -21,3 +21,7 @@ string[] InputStringArrayConsole(int Size)
     }
     return array;
 }
+void PrintArray(string[] array) 
+{
+    System.Console.WriteLine("["+string.Join(", ", array)+"]");
+}
