@@ -50,3 +50,9 @@ string[] CreateArrayStringRequiredLength(string[] array, int StringLength)
     }
     return result;
 }
+int UserArrayLength = InputInt32("Enter size of your array");
+string[] UserArrayString = InputStringArrayConsole(UserArrayLength);
+PrintArray(UserArrayString);
+int UserStringLength = InputInt32("Enter maximum length for elements");
+System.Console.Write($"New array with elements length <= {UserStringLength} : ");
+PrintArray(CreateArrayStringRequiredLength(UserArrayString,UserStringLength));
